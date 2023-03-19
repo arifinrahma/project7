@@ -10,7 +10,7 @@
       <authorizationInfo>
          <entry>
             <key>bearerToken</key>
-            <value>6f10c296cefb4717cefd488d749bdc0955faa166</value>
+            <value>${GlobalVariable.token}</value>
          </entry>
       </authorizationInfo>
       <authorizationType>Bearer</authorizationType>
@@ -24,25 +24,25 @@
   &quot;parameters&quot;: [
     {
       &quot;name&quot;: &quot;firstName&quot;,
-      &quot;value&quot;: &quot;karunia&quot;,
+      &quot;value&quot;: &quot;aa&quot;,
       &quot;type&quot;: &quot;Text&quot;,
       &quot;contentType&quot;: &quot;&quot;
     },
     {
       &quot;name&quot;: &quot;middleName&quot;,
-      &quot;value&quot;: &quot;rahma&quot;,
+      &quot;value&quot;: &quot;bb&quot;,
       &quot;type&quot;: &quot;Text&quot;,
       &quot;contentType&quot;: &quot;&quot;
     },
     {
       &quot;name&quot;: &quot;lastName&quot;,
-      &quot;value&quot;: &quot;aaaa&quot;,
+      &quot;value&quot;: &quot;cc&quot;,
       &quot;type&quot;: &quot;Text&quot;,
       &quot;contentType&quot;: &quot;&quot;
     },
     {
       &quot;name&quot;: &quot;code&quot;,
-      &quot;value&quot;: &quot;3&quot;,
+      &quot;value&quot;: &quot;44&quot;,
       &quot;type&quot;: &quot;Text&quot;,
       &quot;contentType&quot;: &quot;&quot;
     }
@@ -62,14 +62,14 @@
       <matchCondition>equals</matchCondition>
       <name>Authorization</name>
       <type>Main</type>
-      <value>Bearer 6f10c296cefb4717cefd488d749bdc0955faa166</value>
-      <webElementGuid>ead73ad2-83d9-49cf-a42d-b9342a3099c6</webElementGuid>
+      <value>Bearer ${GlobalVariable.token}</value>
+      <webElementGuid>364262a0-b097-4026-ae07-75cd72d581ac</webElementGuid>
    </httpHeaderProperties>
    <katalonVersion>8.4.1</katalonVersion>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>http://apihrm.cilsy.id/symfony/web/index.php/api/v1/employee/1</restUrl>
+   <restUrl>${GlobalVariable.baseurl}/api/v1/employee/1</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>

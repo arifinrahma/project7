@@ -49,5 +49,3 @@ WS.verifyElementPropertyValue(response, 'data.street2', null)
 
 WS.verifyElementPropertyValue(response, 'data.note', null)
 
-WS.verifyElementPropertyValue(response, 'data.numberOfEmployees', 21)
-

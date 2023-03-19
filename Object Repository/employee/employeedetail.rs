@@ -10,7 +10,7 @@
       <authorizationInfo>
          <entry>
             <key>bearerToken</key>
-            <value>6f10c296cefb4717cefd488d749bdc0955faa166</value>
+            <value>${GlobalVariable.token}</value>
          </entry>
       </authorizationInfo>
       <authorizationType>Bearer</authorizationType>
@@ -44,14 +44,14 @@
       <matchCondition>equals</matchCondition>
       <name>Authorization</name>
       <type>Main</type>
-      <value>Bearer 6f10c296cefb4717cefd488d749bdc0955faa166</value>
-      <webElementGuid>23705683-db7d-42d1-be8a-c1b67ea75db5</webElementGuid>
+      <value>Bearer ${GlobalVariable.token}</value>
+      <webElementGuid>0a38e9ce-4f0a-4775-8a75-669da03baa3c</webElementGuid>
    </httpHeaderProperties>
    <katalonVersion>8.4.1</katalonVersion>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>http://apihrm.cilsy.id/symfony/web/index.php/api/v1/employee/1</restUrl>
+   <restUrl>${GlobalVariable.baseurl}/api/v1/employee/1</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>

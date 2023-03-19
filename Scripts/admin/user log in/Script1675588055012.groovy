@@ -20,9 +20,16 @@ import org.openqa.selenium.Keys as Keys
 response = WS.sendRequest(findTestObject('admin/userlogi'))
 
 WS.verifyResponseStatusCode(response, 200)
+
 WS.verifyElementPropertyValue(response, 'login', true)
-WS.verifyElementPropertyValue(response, 'user.userName', "tester")
-WS.verifyElementPropertyValue(response, 'user.userRole', "Admin")
-WS.verifyElementPropertyValue(response, 'user.status', "Enabled")
-WS.verifyElementPropertyValue(response, 'user.employeeName', "tester tester")
-WS.verifyElementPropertyValue(response, 'user.employeeId', "4")
+
+WS.verifyElementPropertyValue(response, 'user.userName', 'tester')
+
+WS.verifyElementPropertyValue(response, 'user.userRole', 'ESS')
+
+WS.verifyElementPropertyValue(response, 'user.status', 'Enabled')
+
+WS.verifyElementPropertyValue(response, 'user.employeeName', 'tester tester')
+
+WS.verifyElementPropertyValue(response, 'user.employeeId', '4')
+

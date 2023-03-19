@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>getoranization</name>
+   <name>alreadypunchout</name>
    <tag></tag>
-   <elementGuidId>8d9b53fd-bba4-4ed4-8f83-92167df1dfcf</elementGuidId>
+   <elementGuidId>594f12a0-c34f-486d-a3be-ed6edfe0a1be</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <authorizationRequest>
@@ -21,7 +21,32 @@
    <httpBodyContent>{
   &quot;contentType&quot;: &quot;multipart/form-data&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;,
-  &quot;parameters&quot;: []
+  &quot;parameters&quot;: [
+    {
+      &quot;name&quot;: &quot;id&quot;,
+      &quot;value&quot;: &quot;1&quot;,
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;contentType&quot;: &quot;&quot;
+    },
+    {
+      &quot;name&quot;: &quot;timezone&quot;,
+      &quot;value&quot;: &quot;Europe/London&quot;,
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;contentType&quot;: &quot;&quot;
+    },
+    {
+      &quot;name&quot;: &quot;note&quot;,
+      &quot;value&quot;: &quot;null&quot;,
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;contentType&quot;: &quot;&quot;
+    },
+    {
+      &quot;name&quot;: &quot;datetime&quot;,
+      &quot;value&quot;: &quot;2023-01-01 01:01&quot;,
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;contentType&quot;: &quot;&quot;
+    }
+  ]
 }</httpBodyContent>
    <httpBodyType>form-data</httpBodyType>
    <httpHeaderProperties>
@@ -30,7 +55,7 @@
       <name>Content-Type</name>
       <type>Main</type>
       <value>multipart/form-data</value>
-      <webElementGuid>f4fa07df-8588-435e-a1f0-8303c9c61dbf</webElementGuid>
+      <webElementGuid>1fd4f235-d2af-437d-8844-3a7a76aaffcc</webElementGuid>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -38,13 +63,13 @@
       <name>Authorization</name>
       <type>Main</type>
       <value>Bearer ${GlobalVariable.token}</value>
-      <webElementGuid>432a63eb-1a0f-40ec-a018-00351b3ba67c</webElementGuid>
+      <webElementGuid>47abdcca-53c3-4c13-a25f-a5312d83a5f9</webElementGuid>
    </httpHeaderProperties>
    <katalonVersion>8.4.1</katalonVersion>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.baseurl}/api/v1/organization</restUrl>
+   <restRequestMethod>POST</restRequestMethod>
+   <restUrl>${GlobalVariable.baseurl}/api/v1/employee/1/punch-out</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -65,21 +90,6 @@ import internal.GlobalVariable as GlobalVariable
 
 RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 
-ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-WS.verifyElementPropertyValue(response, 'data.id', &quot;1&quot;)
-WS.verifyElementPropertyValue(response, 'data.name', &quot;Sekolah Digital Cilsy&quot;)
-WS.verifyElementPropertyValue(response, 'data.taxId', null)
-WS.verifyElementPropertyValue(response, 'data.registraionNumber', null)
-WS.verifyElementPropertyValue(response, 'data.phone', null)
-WS.verifyElementPropertyValue(response, 'data.fax', null)
-WS.verifyElementPropertyValue(response, 'data.email', null)
-WS.verifyElementPropertyValue(response, 'data.country', &quot;ID&quot;)
-WS.verifyElementPropertyValue(response, 'data.province', null)
-WS.verifyElementPropertyValue(response, 'data.city', null)
-WS.verifyElementPropertyValue(response, 'data.zipCode', null)
-WS.verifyElementPropertyValue(response, 'data.street1', null)
-WS.verifyElementPropertyValue(response, 'data.street2', null)
-WS.verifyElementPropertyValue(response, 'data.note', null)
-WS.verifyElementPropertyValue(response, 'data.numberOfEmployees', 20)</verificationScript>
+ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

@@ -10,7 +10,7 @@
       <authorizationInfo>
          <entry>
             <key>bearerToken</key>
-            <value>6f10c296cefb4717cefd488d749bdc0955faa166</value>
+            <value>${GlobalVariable.token}</value>
          </entry>
       </authorizationInfo>
       <authorizationType>Bearer</authorizationType>
@@ -62,14 +62,14 @@
       <matchCondition>equals</matchCondition>
       <name>Authorization</name>
       <type>Main</type>
-      <value>Bearer 6f10c296cefb4717cefd488d749bdc0955faa166</value>
-      <webElementGuid>0bd34ca9-4cb7-4219-8388-9d722e3c3954</webElementGuid>
+      <value>Bearer ${GlobalVariable.token}</value>
+      <webElementGuid>8ae3e192-acc0-4ebc-aa74-5e582622432a</webElementGuid>
    </httpHeaderProperties>
    <katalonVersion>8.4.1</katalonVersion>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>http://apihrm.cilsy.id/symfony/web/index.php/api/v1/employee/1/punch-in</restUrl>
+   <restUrl>${GlobalVariable.baseurl}/api/v1/employee/1/punch-in</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>

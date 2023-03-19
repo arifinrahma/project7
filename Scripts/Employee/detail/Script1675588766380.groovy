@@ -20,20 +20,38 @@ import org.openqa.selenium.Keys as Keys
 response = WS.sendRequest(findTestObject('employee/employeedetail'))
 
 WS.verifyResponseStatusCode(response, 200)
-WS.verifyElementPropertyValue(response, 'data.firstName', "Boss")
-WS.verifyElementPropertyValue(response, 'data.middleName', "")
-WS.verifyElementPropertyValue(response, 'data.lastName', "Besar")
-WS.verifyElementPropertyValue(response, 'data.code', "0001")
-WS.verifyElementPropertyValue(response, 'data.employeeId', "1")
-WS.verifyElementPropertyValue(response, 'data.fullName', "Boss Besar")
+
+WS.verifyElementPropertyValue(response, 'data.firstName', 'Boss')
+
+WS.verifyElementPropertyValue(response, 'data.middleName', '')
+
+WS.verifyElementPropertyValue(response, 'data.lastName', 'Besar')
+
+WS.verifyElementPropertyValue(response, 'data.code', '0001')
+
+WS.verifyElementPropertyValue(response, 'data.employeeId', '1')
+
+WS.verifyElementPropertyValue(response, 'data.fullName', 'Boss Besar (Past Employee)')
+
 WS.verifyElementPropertyValue(response, 'data.status', null)
+
 WS.verifyElementPropertyValue(response, 'data.dob', null)
-WS.verifyElementPropertyValue(response, 'data.driversLicenseNumber', "")
+
+WS.verifyElementPropertyValue(response, 'data.driversLicenseNumber', '')
+
 WS.verifyElementPropertyValue(response, 'data.licenseExpiryDate', null)
+
 WS.verifyElementPropertyValue(response, 'data.maritalStatus', null)
+
 WS.verifyElementPropertyValue(response, 'data.gender', null)
-WS.verifyElementPropertyValue(response, 'data.otherId', "")
-WS.verifyElementPropertyValue(response, 'data.nationality', null)
+
+WS.verifyElementPropertyValue(response, 'data.otherId', '')
+
+WS.verifyElementPropertyValue(response, 'data.nationality', 'Indonesian')
+
 WS.verifyElementPropertyValue(response, 'data.unit', null)
+
 WS.verifyElementPropertyValue(response, 'data.jobTitle', null)
+
 WS.verifyElementPropertyValue(response, 'data.supervisor', null)
+

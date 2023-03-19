@@ -10,7 +10,7 @@
       <authorizationInfo>
          <entry>
             <key>bearerToken</key>
-            <value>6f10c296cefb4717cefd488d749bdc0955faa166</value>
+            <value>${GlobalVariable.token}</value>
          </entry>
       </authorizationInfo>
       <authorizationType>Bearer</authorizationType>
@@ -56,8 +56,8 @@
       <matchCondition>equals</matchCondition>
       <name>Authorization</name>
       <type>Main</type>
-      <value>Bearer 6f10c296cefb4717cefd488d749bdc0955faa166</value>
-      <webElementGuid>db1c9c7a-54d0-4d0b-92dc-93f776f29806</webElementGuid>
+      <value>Bearer ${GlobalVariable.token}</value>
+      <webElementGuid>7a40ac54-f2ec-4d9e-840a-25288e7ac495</webElementGuid>
    </httpHeaderProperties>
    <katalonVersion>8.4.1</katalonVersion>
    <maxResponseSize>-1</maxResponseSize>

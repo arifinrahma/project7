@@ -17,11 +17,9 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-response = WS.sendRequest(findTestObject('employee/saveemployee'))
+response = WS.sendRequest(findTestObject('Attendance/invalidid'))
 
-WS.verifyResponseStatusCode(response, 200)
+WS.verifyElementPropertyValue(response, 'error.text', 'Employee id 1333 Not Found')
 
-WS.verifyElementPropertyValue(response, 'success', 'Successfully Saved')
-
-WS.verifyElementPropertyValue(response, 'id', '232')
+WS.verifyResponseStatusCode(response, 404)
 

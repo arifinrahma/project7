@@ -46,7 +46,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>http://apihrm.cilsy.id/symfony/web/index.php/oauth/issueToken</restUrl>
+   <restUrl>${GlobalVariable.baseurl}/oauth/issueToken</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>

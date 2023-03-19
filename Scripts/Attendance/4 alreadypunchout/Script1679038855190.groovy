@@ -17,8 +17,9 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WS.sendRequest(findTestObject('Attendance/Punchin'))
+response = WS.sendRequest(findTestObject('Attendance/alreadypunchout'))
 
-WS.verifyResponseStatusCode(response, 200)
-WS.verifyElementPropertyValue(response, 'success', "Successfully Punched In")
-WS.verifyElementPropertyValue(response, 'id', "30")
+WS.verifyElementPropertyValue(response, 'error.text', 'Cannot Proceed Punch Out Employee Already Punched Out')
+
+WS.verifyResponseStatusCode(response, 202)
+
